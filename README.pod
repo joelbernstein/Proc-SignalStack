@@ -4,18 +4,18 @@ Proc::SignalStack - Stacked signal handlers
 
 =head1 SYNOPSIS
 
-use Proc::SignalStack;
-my $ss = Proc::SignalStack->new;
-$ss->add(INT  => \&handle_sigint1);
-$ss->add(INT  => \&handle_sigint2);
-$ss->add(ALRM => \&handle_timeout);
-$ss->install; # set these handlers active, saving any signals
-# ... do stuff with signals ...
-$ss->uninstall;             # deactivate our signal handlers, replace originals
-# ... do some other stuff with your own signal handlers
-$ss->install;               # reactivate our signal stack
-# ... do stuff with signals ...
-$ss->uninstall_permanently; # deactivate and clear signal handlers, replace originals
+    use Proc::SignalStack;
+    my $ss = Proc::SignalStack->new;
+    $ss->add(INT  => \&handle_sigint1);
+    $ss->add(INT  => \&handle_sigint2);
+    $ss->add(ALRM => \&handle_timeout);
+    $ss->install; # set these handlers active, saving any signals
+    # ... do stuff with signals ...
+    $ss->uninstall;             # deactivate our signal handlers, replace originals
+    # ... do some other stuff with your own signal handlers
+    $ss->install;               # reactivate our signal stack
+    # ... do stuff with signals ...
+    $ss->uninstall_permanently; # deactivate and clear signal handlers, replace originals
 
 =head1 DESCRIPTION
 
