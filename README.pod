@@ -40,7 +40,7 @@ replace it when the signal stack is uninstalled - it will NOT be added to the si
 
 Constructs a C<Proc::SignalStack> or C<Proc::SignalStack::Mortal> object. 
 
-The first argument may be an arrayref of hashrefs (AoH) of C<< SIGNALNAME => \&handler}>>.
+The first argument may be an arrayref of hashrefs (AoH) of C<< SIGNALNAME => \&handler >>.
 
 An optional C<<mortal=>1>> may be specified to denote whether to build a mortal object
 which uninstalls itself when it goes out of scope. See L<Proc::SignalStack::Mortal|Proc::SignalStack::Mortal>.
